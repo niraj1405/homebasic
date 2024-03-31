@@ -1,6 +1,6 @@
 FROM openjdk:17
 WORKDIR /APP
-COPY  target/*.jar  app.jar
-ENTRYPOINT [ "java", "-jar", "/app.jar"]
+COPY ./target/WebApp.jar /APP/
+ENTRYPOINT [ "java", "-jar", "APP/WebApp.jar"]
 EXPOSE 8081
 
