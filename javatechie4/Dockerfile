@@ -8,11 +8,11 @@ RUN mkdir -p /APP
 WORKDIR /APP
 
 # Copy the WebApp.jar file from the target directory into the container's /APP directory
-COPY SpringMySQLTicketing/target/SpringMySQLTicketing.jar /APP
+COPY SpringMySQLTicketing/target/Ticketing.jar /APP
 
 
 # Define the command to run the application
-ENTRYPOINT ["java", "-jar", "APP/SpringMySQLTicketing.jar"]
+ENTRYPOINT ["java", "-jar", "APP/Ticketing.jar"]
 
 # Expose the port that the application runs on (assuming it runs on port 8081)
 EXPOSE 8081
