@@ -7,13 +7,13 @@ services:
       MYSQL_ROOT_PASSWORD: 815321#ADM
       MYSQL_DATABASE: ticketdb
     ports:
-      - '3306:3306'
+      - '3307:3306'
 
   application:
     build:
       context: .
       dockerfile: Dockerfile
-    image: niraj1405/ticketing:1.0.0-5
+    image: niraj1405/ticketing:1.0.0-6
     depends_on:
       - mysql-db-1
     ports:
