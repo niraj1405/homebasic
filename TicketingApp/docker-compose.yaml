@@ -1,28 +1,25 @@
 version: '3.8'
 
 services:
-  mysql-db:
-   image: 'mysql:latest'
-   environment:
-     MYSQL_ROOT_PASSWORD: 815321#PASS
-     MYSQL_DATABASE: ticketdb
-     port: '3307:3306'
+  mysql-db-1:
+    image: 'mysql:latest'
+    environment:
+      MYSQL_ROOT_PASSWORD: 815321#TEST
+      MYSQL_DATABASE: ticketdb
+    ports:
+      - '3306:3306'
 
   application:
-     build:
-         context: .
-         dockerfile: Dockerfile
-     image: niraj1405/ticketing:1.0.0-3
-     depends_on:
-       - mysql-db
-     ports:
-       - '8181:8181'
-     environment:
-        SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
-        SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/ticketsdb   
-        SPRING_DATASOURCE_USERNAME: root
-        SPRING_DATASOURCE_PASSWORD: 815321#PASS
-
-     
-       
-       
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: img/ticketing:1.0.0-4
+    depends_on:
+      - mysql-db-1
+    ports:
+      - '7878:8181'
+    environment:
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db-1:3306/ticketdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 815321#TEST
