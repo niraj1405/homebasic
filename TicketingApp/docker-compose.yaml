@@ -13,11 +13,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: niraj1405/ticketing:1.0.0-8
+    image: niraj1405/ticketing:1.0.0-9
     depends_on:
       - mysql-db-1
     ports:
-      - '7878:9098'
+      - '7878:8088'
     environment:
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db-1:3306/ticketdb
