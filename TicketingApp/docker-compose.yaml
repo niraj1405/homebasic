@@ -13,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ticketing:2.0.0-1
+    image: niraj1405/ticketing:1.0.0-10
     depends_on:
       - mysql-db-1
     ports:
