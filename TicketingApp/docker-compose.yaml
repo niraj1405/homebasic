@@ -4,7 +4,7 @@ services:
   mysql-db-1:
     image: 'mysql:latest'
     environment:
-      MYSQL_ROOT_PASSWORD: 815321#ADM
+      MYSQL_ROOT_PASSWORD: 815321#mkUMMYSQL
       MYSQL_DATABASE: ticketdb
     ports:
       - '3307:3306'
@@ -22,4 +22,4 @@ services:
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db-1:3306/ticketdb
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: 815321#ADM
+      SPRING_DATASOURCE_PASSWORD: 815321#mkUMMYSQL
