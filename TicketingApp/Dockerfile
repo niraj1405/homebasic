@@ -12,7 +12,8 @@ COPY TicketingApp/target/Ticketing.jar /APP
 
 
 # Define the command to run the application
-ENTRYPOINT ["java", "-jar", "APP/Ticketing.jar"]
+ENTRYPOINT ["java", "-jar", "Ticketing.jar"]
 
 # Expose the port that the application runs on (assuming it runs on port 8081)
 EXPOSE 8081
+
