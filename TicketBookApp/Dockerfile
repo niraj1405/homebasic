@@ -7,8 +7,8 @@ RUN mkdir -p /APP
 # Set the working directory to /APP
 WORKDIR /APP
 
-# Copy the JAR file from the specified location into the container's /APP directory
-COPY C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\testdocker\\TicketBookApp\\target\\TicketBookApp.jar /APP/
+# Copy the JAR file from the relative path into the container's /APP directory
+COPY TicketBookApp/target/TicketBookApp.jar /APP/
 
 # Define the command to run the application
 ENTRYPOINT ["java", "-jar", "TicketBookApp.jar"]
