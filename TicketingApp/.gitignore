@@ -1,4 +1,35 @@
-HELP.md
-HELP.md
-target/*
-!target/*.jar
+# Maven target directory
+/target/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# Compiled Java classes
+*.class
+
+# Dependency directories
+bin/
+lib/
+
+# Compiled Maven files
+maven-archiver/
+maven-status/
+
+# Ignore Docker files if not needed in the repository
+Dockerfile
+docker-compose.yml
+
+# Ignore any other generated files or directories
+/generated/
+/output/
+/dist/
+
