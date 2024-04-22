@@ -8,7 +8,7 @@ RUN mkdir -p /APP
 WORKDIR /APP
 
 # Copy the WebApp.jar file from the target directory into the container's /APP directory
-COPY TicketingApp/target/TicketBookApp.jar /APP
+COPY TicketBookApp/target/TicketBookApp.jar /APP
 
 
 # Define the command to run the application
