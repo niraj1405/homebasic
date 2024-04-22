@@ -1,35 +1,33 @@
-# Maven target directory
-/target/
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Eclipse files
+### STS ###
+.apt_generated
 .classpath
+.factorypath
 .project
-.settings/
+.settings
+.springBeans
+.sts4-cache
 
-# IntelliJ IDEA files
-.idea/
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
+*.ipr
 
-# Log files
-*.log
-
-# Compiled Java classes
-*.class
-
-# Dependency directories
-bin/
-lib/
-
-# Compiled Maven files
-maven-archiver/
-maven-status/
-
-# Ignore Docker files if not needed in the repository
-Dockerfile
-docker-compose.yml
-
-# Ignore any other generated files or directories
-/generated/
-/output/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
 /dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
+### VS Code ###
+.vscode/
